@@ -6,39 +6,63 @@
     <title>Games</title>
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: #101010;
+            color: #FFFFFF;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #333333;
         }
         .header a {
-            color: white;
+            color: #FFFFFF;
             text-decoration: none;
             margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .header a:hover {
+            background-color: #555555;
+        }
+        .content {
+            padding: 20px;
+        }
+        h1 {
+            margin-top: 0;
         }
         .downloads {
-            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             margin-top: 20px;
         }
         .download-block {
-            background-color: gray;
-            padding: 40px;
-            margin: 20px 0;
+            background-color: #333333;
+            padding: 20px;
             border-radius: 10px;
-            font-size: 24px;
-            width: 100%;
-            box-sizing: border-box;
+            width: 250px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .download-block:hover {
+            background-color: #555555;
         }
         .download-block a {
-            color: white;
+            color: #FFFFFF;
             text-decoration: none;
+        }
+        .download-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -49,23 +73,34 @@
         <a href="games.html">Games</a>
         <a href="viruses.html">Viruses</a>
     </div>
-    <h1>Games</h1>
-    <div class="downloads">
-        <h3>Downloads:</h3>
-        <div class="download-block">
-            <a href="game1.zip" download>Download Game 1</a>
-        </div>
-        <div class="download-block">
-            <a href="game2.zip" download>Download Game 2</a>
-        </div>
-        <div class="download-block">
-            <a href="game3.zip" download>Download Game 3</a>
-        </div>
-        <div class="download-block">
-            <a href="game4.zip" download>Download Game 4</a>
-        </div>
-        <div class="download-block">
-            <a href="game5.zip" download>Download Game 5</a>
+    <div class="content">
+        <h1>Games</h1>
+        <div class="downloads">
+            <div class="download-block">
+                <img src="game1.jpg" alt="Game 1">
+                <br>
+                <a href="game1.zip" download>Download Game 1</a>
+            </div>
+            <div class="download-block">
+                <img src="game2.jpg" alt="Game 2">
+                <br>
+                <a href="game2.zip" download>Download Game 2</a>
+            </div>
+            <div class="download-block">
+                <img src="game3.jpg" alt="Game 3">
+                <br>
+                <a href="game3.zip" download>Download Game 3</a>
+            </div>
+            <div class="download-block">
+                <img src="game4.jpg" alt="Game 4">
+                <br>
+                <a href="game4.zip" download>Download Game 4</a>
+            </div>
+            <div class="download-block">
+                <img src="game5.jpg" alt="Game 5">
+                <br>
+                <a href="game5.zip" download>Download Game 5</a>
+            </div>
         </div>
     </div>
 </body>
