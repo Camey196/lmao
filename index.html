@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .header a:hover {
+            background-color: #555;
+        }
+        .hero {
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 40px 20px;
+        }
+        .downloads {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .download-block {
+            background-color: gray;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center;
+            width: 200px;
+            transition: background-color 0.3s;
+        }
+        .download-block a {
+            color: white;
+            text-decoration: none;
+        }
+        .download-block:hover {
+            background-color: #555;
+        }
+        .footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="prototypes.html">Prototypes</a>
+        <a href="games.html">Games</a>
+        <a href="viruses.html">Viruses</a>
+    </div>
+    <div class="hero">
+        <div>
+            <h1>Welcome to games and other stuff.....</h1>
+            <p>Explore prototypes, games, and more</p>
+        </div>
+    </div>
+    <div class="content">
+        <h2>These Downloads</h2>
+        <p>Here are some downloads they are completely safe to install/download but they arent ourr besst ones these are some simple games also i dont think these work on mobile sorry :(</p>
+        <div class="downloads">
+            <div class="download-block">
+                <a href="game1.zip" download>Download Game 1</a>
+            </div>
+            <div class="download-block">
+                <a href="game2.zip" download>Download Game 2</a>
+            </div>
+            <div class="download-block">
+                <a href="game3.zip" download>Download Game 3</a>
+            </div>
+            <div class="download-block">
+                <a href="game4.zip" download>Download Game 4</a>
+            </div>
+            <div class="download-block">
+                <a href="game5.zip" download>Download Game 5</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; Creators - Cameron - Jack
+    </div>
+</body>
+</html>
