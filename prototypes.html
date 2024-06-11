@@ -18,17 +18,19 @@
             align-items: center;
             padding: 20px;
             background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .header a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .header a:hover {
             background-color: #555;
+            transform: scale(1.1);
         }
         .hero {
             background: url('hero-background.jpg') no-repeat center center/cover;
@@ -42,10 +44,12 @@
         .hero h1 {
             font-size: 3em;
             margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .hero p {
             font-size: 1.5em;
             margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
         .content {
             padding: 40px 20px;
@@ -64,7 +68,7 @@
             font-size: 18px;
             text-align: center;
             width: 200px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .download-block a {
             color: white;
@@ -72,6 +76,7 @@
         }
         .download-block:hover {
             background-color: #555;
+            transform: scale(1.05);
         }
         .footer {
             background-color: #333;
@@ -83,13 +88,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             text-align: center;
+            transition: transform 0.3s;
+        }
+        .prototype:hover {
+            transform: scale(1.05);
         }
         .prototype img {
             margin-bottom: 20px;
             border-radius: 10px;
             max-width: 300px;
+            transition: opacity 0.3s;
+        }
+        .prototype img:hover {
+            opacity: 0.8;
         }
         .feedback-box {
             background-color: #333;
@@ -98,6 +111,7 @@
             border-radius: 10px;
             margin-top: 50px;
             text-align: center;
+            animation: fadeIn 2.5s ease-in-out;
         }
         .feedback-box textarea {
             width: 100%;
@@ -110,6 +124,10 @@
             border-radius: 5px;
             resize: none;
             margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .feedback-box textarea:focus {
+            background-color: #666;
         }
         .feedback-box button {
             background-color: #555;
@@ -120,24 +138,43 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .feedback-box button:hover {
             background-color: #777;
+            transform: scale(1.1);
         }
         .comments {
             margin-top: 20px;
             text-align: left;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            animation: fadeIn 3s ease-in-out;
         }
         .comment {
             background-color: #555;
             border-radius: 10px;
             padding: 10px;
             margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .comment:hover {
+            transform: scale(1.05);
         }
         .comment p {
             margin: 0;
             color: white;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -147,41 +184,67 @@
         <a href="prototypes.html">Prototypes</a>
         <a href="games.html">Games</a>
         <a href="viruses.html">Viruses</a>
+        <a href="credits.html">Credits</a>
     </div>
-    <h1>Prototypes</h1>
-    <div class="prototype">
-        <img src="https://ih1.redbubble.net/image.2371675250.1628/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Prototype 1">
-        <h3>Here is our new game called "Dont open" it is a game we are working on and fixing up until we put it in the downloads/viruses page this game is going to be a funny game but remeber "dont open"</h3>
+    <div class="content">
+        <h1>Prototypes</h1>
+        <div class="prototype">
+            <img src="https://ih1.redbubble.net/image.2371675250.1628/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Prototype 1">
+            <h3>Here is our new game called "Don't Open". It is a game we are working on and fixing up until we put it in the downloads/viruses page. This game is going to be a funny game but remember "Don't Open".</h3>
+        </div>
+        <div class="prototype">
+            <img src="https://media.licdn.com/dms/image/C4E12AQEu-c48Kp3SFg/article-cover_image-shrink_600_2000/0/1605476863463?e=2147483647&v=beta&t=Pp0JxaA4V4zcVZNPskEHUkmHkQYm-42ub4YsjqvkpD4" alt="Prototype 2">
+            <h3>Here is our new game called "Chat Room". It is a game we are working on and fixing up until we put it in the downloads/viruses page. This game allows you to chat with anybody in the world on command prompt.</h3>
+        </div>
+        <div class="feedback-box">
+            <h2>Leave a Comment</h2>
+            <form id="comment-form">
+                <textarea id="comment" name="comment" placeholder="Enter your comment"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="comments">
+            <h2>Your Comments</h2>
+        </div>
     </div>
-    <div class="prototype">
-        <img src="https://media.licdn.com/dms/image/C4E12AQEu-c48Kp3SFg/article-cover_image-shrink_600_2000/0/1605476863463?e=2147483647&v=beta&t=Pp0JxaA4V4zcVZNPskEHUkmHkQYm-42ub4YsjqvkpD4" alt="Prototype 2">
-        <h3>Here is our new game called "Chat room" it is a game we are working on and fixing up until we put it in the downloads/viruses page this game you can chat to anybody in the world on command prompt</h3>
-    </div>
-    <div class="feedback-box">
-        <h2>Leave a Comment</h2>
-        <form id="comment-form">
-            <textarea id="comment" name="comment" placeholder="Enter your comment"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="comments">
-        <h2>Your Comments</h2>
-        <!-- Here you can display comments dynamically using JavaScript -->
-    </div>
-
     <script>
+        // Load comments from localStorage
+        function loadComments() {
+            const commentsContainer = document.querySelector('.comments');
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = '<p>' + comment + '</p>';
+                commentsContainer.appendChild(commentDiv);
+            });
+        }
+
+        // Save comment to localStorage
+        function saveComment(comment) {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push(comment);
+            localStorage.setItem('comments', JSON.stringify(comments));
+        }
+
         document.getElementById('comment-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            var comment = document.getElementById('comment').value;
+            const comment = document.getElementById('comment').value;
             if (comment.trim() !== '') {
-                var commentDiv = document.createElement('div');
+                const commentDiv = document.createElement('div');
                 commentDiv.classList.add('comment');
                 commentDiv.innerHTML = '<p>' + comment + '</p>';
                 document.querySelector('.comments').appendChild(commentDiv);
+                saveComment(comment);
                 document.getElementById('comment').value = '';
             }
         });
+
+        // Load comments on page load
+        window.onload = loadComments;
     </script>
+    <div class="footer">
+        &copy; Creators - Cameron - Jack
+    </div>
 </body>
 </html>
-
