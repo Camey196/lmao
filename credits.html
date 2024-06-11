@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .header a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: url('credits-background.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .content {
+            padding: 20px 20px; /* Adjusted padding to make the content higher */
+            text-align: center; /* Center align the content */
+        }
+        .content h2 {
+            margin: 10px 0; /* Adjusted margin to bring the text closer to the title */
+        }
+        .credits-list {
+            margin: 0 auto; /* Center align the list */
+            padding: 0;
+            list-style: none;
+            display: inline-block; /* Center the list items */
+            text-align: left; /* Left align the text within the list items */
+        }
+        .credits-list li {
+            margin: 5px 0; /* Reduced margin between list items */
+            font-size: 1.2em;
+        }
+        .footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="prototypes.html">Prototypes</a>
+        <a href="games.html">Games</a>
+        <a href="viruses.html">Viruses</a>
+        <a href="credits.html">Credits</a>
+    </div>
+    <div class="hero">
+        <div>
+            <h1>Credits</h1>
+            <p>Recognizing the contributions</p>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Project Contributors</h2>
+        <ul class="credits-list">
+            <li>Cameron - Lead Developer</li>
+            <li>Jack - Designer and Tester</li>
+            <li>Github - Publishing Website</li>
+            <li>LCN - Domain</li>
+        </ul>
+        <h2>Special Thanks</h2>
+        <ul class="credits-list">
+            <li>Community Members - Feedback and support</li>
+            <li>Beta Testers - Helping identify issues</li>
+            <li>Friends and Family - Continuous support and encouragement</li>
+        </ul>
+    </div>
+    <div class="footer">
+        &copy; Creators - Cameron - Jack
+    </div>
+</body>
+</html>
