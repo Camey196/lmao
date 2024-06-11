@@ -10,37 +10,49 @@
             color: white;
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 20px;
             background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .header a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .header a:hover {
             background-color: #555;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
         .content {
-            padding: 20px;
-        }
-        .textbox {
-            background-color: #222;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-        .textbox h3 {
-            color: white;
-            margin: 0;
+            padding: 40px 20px;
         }
         .downloads {
             margin-top: 20px;
@@ -55,15 +67,57 @@
             border-radius: 10px;
             font-size: 18px;
             text-align: center;
-            width: 700px; /* Increased width by 500px */
-            transition: background-color 0.3s;
+            width: 200px;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
         }
         .download-block a {
             color: white;
             text-decoration: none;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .download-block a:hover {
+            background-color: #777;
+            transform: scale(1.1);
+        }
+        .download-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+        .download-block:hover img {
+            opacity: 0.8;
         }
         .download-block:hover {
             background-color: #555;
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -73,31 +127,42 @@
         <a href="prototypes.html">Prototypes</a>
         <a href="games.html">Games</a>
         <a href="viruses.html">Viruses</a>
+        <a href="credits.html">Credits</a>
+    </div>
+    <div class="hero">
+        <div>
+            <h1>Viruses</h1>
+            <p>Beware of some of the downloads</p>
+        </div>
     </div>
     <div class="content">
-        <h1>Viruses</h1>
-        <div class="textbox">
-            <h3>Read me</h3>
-            <h3>Please do not be worried about any of these viruses. They don't do much. If you want, set a restore point on your computer. (Also, DO NOT use these in a harmful way, they are just for fun) :)(RUN KILL COMPUTER AT OWN RISK IT DOES WHAT IT SAYS)</h3>
-        </div>
+        <h2>Virus Downloads</h2>
+        <p>Our viruses and downloads on this page do what they say/mean, so don't be angry when "Kill Computer" kills your computer. Just be aware. Most viruses on our downloads are not harmful. Also, I don't think these work on mobile, sorry :(</p>
         <div class="downloads">
             <div class="download-block">
+                <img src="https://as1.ftcdn.net/v2/jpg/00/17/07/00/1000_F_17070029_Z62HJJGugcErbh2ligzRIeg8iiVaZ6iy.jpg" alt="Crazy Mouse">
                 <a href="Crazy Mouse.exe" download>Crazy Mouse</a>
             </div>
             <div class="download-block">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/000/574/782/small/vector60-5835-01.jpg" alt="Sign Out">
                 <a href="Sign Out.exe" download>Sign Out</a>
             </div>
-                <div class="download-block">
-                    <a href="Kill Computer.exe" download>Kill Computer</a>
-                </div>
-                <div class="download-block">
-                    <a href="Change Time.exe" download>Change Time</a>
-                </div>
-                <div class="download-block">
-                    <a href="Restart.exe" download>Restart</a>
-                </div>
+            <div class="download-block">
+                <img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/08/dead-computer-monitor.jpg" alt="Kill Computer">
+                <a href="Kill Computer.exe" download>Kill Computer</a>
+            </div>
+            <div class="download-block">
+                <img src="https://www.dairydiary.co.uk/wp-content/uploads/2021/03/Why-do-the-clocks-go-forward-in-the-UK.jpg" alt="Change Time">
+                <a href="Change Time.exe" download>Change Time</a>
+            </div>
+            <div class="download-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThF_ZRIt-xpfEPBa00iG6DJV9WD7grlhxQqQ&s" alt="Restart">
+                <a href="Restart.exe" download>Restart</a>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        &copy; Creators - Cameron - Jack
     </div>
 </body>
 </html>
