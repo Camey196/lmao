@@ -11,6 +11,19 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2vw; /* Adjusted font size */
+            color: rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            z-index: -1;
         }
         .header {
             display: flex;
@@ -18,17 +31,19 @@
             align-items: center;
             padding: 20px;
             background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .header a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .header a:hover {
             background-color: #555;
+            transform: scale(1.1);
         }
         .hero {
             background: url('hero-background.jpg') no-repeat center center/cover;
@@ -42,10 +57,12 @@
         .hero h1 {
             font-size: 3em;
             margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
         }
         .hero p {
             font-size: 1.5em;
             margin-top: 10px;
+            animation: fadeInUp 1.5s ease-in-out;
         }
         .content {
             padding: 40px 20px;
@@ -64,20 +81,42 @@
             font-size: 18px;
             text-align: center;
             width: 200px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .download-block a {
             color: white;
             text-decoration: none;
+            display: block;
         }
         .download-block:hover {
             background-color: #555;
+            transform: scale(1.05);
         }
         .footer {
             background-color: #333;
             text-align: center;
             padding: 20px;
             margin-top: 20px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -87,16 +126,17 @@
         <a href="prototypes.html">Prototypes</a>
         <a href="games.html">Games</a>
         <a href="viruses.html">Viruses</a>
+        <a href="credits.html">Credits</a>
     </div>
     <div class="hero">
         <div>
-            <h1>Welcome to games and other stuff.....</h1>
-            <p>Explore prototypes, games, and more</p>
+            <h1>Welcome to Games and Other Stuff</h1>
+            <p>Prototypes, games, and more</p>
         </div>
     </div>
     <div class="content">
-        <h2>These Downloads On My Website</h2>
-        <p>Here are some downloads they are completely safe to install/download but they arent ourr best ones these are some simple games also i dont think these work on mobile sorry :(</p>
+        <h2>These Downloads on My Website</h2>
+        <p>Our viruses and downloads on this page do what they say/mean, so don't be angry when "Kill Computer" kills your computer. Just be aware. Most viruses on our downloads are not harmful. Also, I don't think these work on mobile, sorry :(</p>
     </div>
     <div class="footer">
         &copy; Creators - Cameron - Jack
